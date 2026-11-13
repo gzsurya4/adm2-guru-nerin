@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>EduClay — Aplikasi Administrasi Guru Modern</title>
+  <title>Nerin — Aplikasi Administrasi Guru Nerin</title>
 
   <meta name="theme-color" content="#FBF7F0" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <link rel="manifest" href='data:application/manifest+json,{"name":"EduClay Administrasi Guru","short_name":"EduClay","start_url":".","display":"standalone","background_color":"#FBF7F0","theme_color":"#F08A6C","icons":[{"src":"https://placehold.co/192x192/F08A6C/FFFDF9?text=EC","sizes":"192x192","type":"image/png"},{"src":"https://placehold.co/512x512/689F95/FFFDF9?text=EduClay","sizes":"512x512","type":"image/png"}]}' />
+  <link rel="manifest" href='data:application/manifest+json,{"name":"NerinDigital Administrasi Guru","short_name":"NerinDigital","start_url":".","display":"standalone","background_color":"#FBF7F0","theme_color":"#F08A6C","icons":[{"src":"https://placehold.co/192x192/F08A6C/FFFDF9?text=EC","sizes":"192x192","type":"image/png"},{"src":"https://placehold.co/512x512/689F95/FFFDF9?text=NerinDigital","sizes":"512x512","type":"image/png"}]}' />
 
   <!-- Fonts: Plus Jakarta Sans & Quicksand for soft rounded Claymorphism typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -393,7 +393,7 @@
             Hi, <span id="sidebar-user-name">Bu Mia</span>! 👋
           </h2>
           <p id="sidebar-user-role" class="text-xs font-semibold text-clay-textBody mt-0.5">Guru Mata Pelajaran</p>
-          <p id="sidebar-school-name" class="text-[11px] font-bold text-clay-teal mt-1 text-center px-2 truncate w-full">SMA Negeri 1 EduClay</p>
+          <p id="sidebar-school-name" class="text-[11px] font-bold text-clay-teal mt-1 text-center px-2 truncate w-full">SMA Negeri 1 NerinDigital</p>
         </div>
 
         <nav class="space-y-2" id="desktop-nav">
@@ -1139,7 +1139,7 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-xs font-bold text-clay-textBody mb-1">Nama Aplikasi</label>
-                  <input type="text" id="set-app-name" required placeholder="Cth: EduClay Guru" class="w-full clay-input px-3.5 py-2.5 text-sm font-bold" />
+                  <input type="text" id="set-app-name" required placeholder="Cth: NerinDigital Guru" class="w-full clay-input px-3.5 py-2.5 text-sm font-bold" />
                 </div>
                 <div>
                   <label class="block text-xs font-bold text-clay-textBody mb-1">Nama Sekolah / Instansi</label>
@@ -1670,8 +1670,8 @@
       grades: [],
       journals: [],
       settings: {
-        appName: 'EduClay Guru',
-        schoolName: 'SMA Negeri 1 EduClay',
+        appName: 'NerinDigital Guru',
+        schoolName: 'SMA Negeri 1 NerinDigital',
         schoolLogo: '',
         schoolAddress: 'Jl. Pendidikan No. 45, Kota Cerdas - Telp: (021) 555-0192',
         principalName: 'Dr. H. Hendra Wijaya, M.Pd.',
@@ -2011,9 +2011,9 @@
 
     function applySettingsBranding() {
       const s = state.settings || {};
-      document.title = `${s.appName || 'EduClay Guru'} - ${s.schoolName || 'Sekolah EduClay'}`;
+      document.title = `${s.appName || 'NerinDigital Guru'} - ${s.schoolName || 'Sekolah NerinDigital'}`;
       const schoolSidebarEl = document.getElementById('sidebar-school-name');
-      if (schoolSidebarEl) schoolSidebarEl.textContent = s.schoolName || 'Sekolah EduClay';
+      if (schoolSidebarEl) schoolSidebarEl.textContent = s.schoolName || 'Sekolah NerinDigital';
 
       const logoImg = document.getElementById('sidebar-school-logo');
       const avatarSvg = document.getElementById('sidebar-default-avatar');
@@ -2559,7 +2559,7 @@
       const worksheet = XLSX.utils.json_to_sheet(templateRows);
       const workbook = XLSX.utils.book_new();
       XLSX.utils.book_append_sheet(workbook, worksheet, 'Format_Impor_Siswa');
-      XLSX.writeFile(workbook, 'Format_Impor_Siswa_EduClay.xlsx');
+      XLSX.writeFile(workbook, 'Format_Impor_Siswa_NerinDigital.xlsx');
       showToast('Template .xlsx berhasil diunduh!', 'success');
     };
 
@@ -3334,7 +3334,7 @@
         title: 'Impor Data Kelas (.xlsx)',
         subtitle: 'Tambahkan banyak rombongan belajar sekaligus',
         info: 'Kolom: <b>Nama Kelas</b>, <b>Tahun Ajaran</b>, <b>Username Wali Kelas</b> (atau nama guru), dan <b>Keterangan</b>. Kelas dengan nama & tahun ajaran yang sama akan dilewati.',
-        filename: 'Format_Impor_Kelas_EduClay.xlsx',
+        filename: 'Format_Impor_Kelas_NerinDigital.xlsx',
         sheet: 'Format_Impor_Kelas',
         previewHead: ['No', 'Nama Kelas', 'Tahun Ajaran', 'Wali Kelas', 'Status']
       },
@@ -3342,7 +3342,7 @@
         title: 'Impor Mapel & Pengampu (.xlsx)',
         subtitle: 'Tetapkan mata pelajaran, kelas, dan guru pengajar sekaligus',
         info: 'Kolom: <b>Kode Mapel</b>, <b>Nama Mapel</b>, <b>Nama Kelas</b> (harus sudah ada), dan <b>Username Guru</b> (harus sudah ada). Impor Kelas & Akun Guru lebih dulu.',
-        filename: 'Format_Impor_Mapel_Pengampu_EduClay.xlsx',
+        filename: 'Format_Impor_Mapel_Pengampu_NerinDigital.xlsx',
         sheet: 'Format_Impor_Mapel',
         previewHead: ['No', 'Kode', 'Mata Pelajaran', 'Kelas', 'Guru Pengajar', 'Status']
       },
@@ -3350,7 +3350,7 @@
         title: 'Impor Akun Guru (.xlsx)',
         subtitle: 'Buat banyak akun login guru sekaligus',
         info: 'Kolom: <b>Nama Lengkap</b>, <b>NIP</b>, <b>Mapel Utama</b>, <b>Username</b>, dan <b>Password</b>. Username yang sudah terdaftar akan dilewati.',
-        filename: 'Format_Impor_Akun_Guru_EduClay.xlsx',
+        filename: 'Format_Impor_Akun_Guru_NerinDigital.xlsx',
         sheet: 'Format_Impor_Akun_Guru',
         previewHead: ['No', 'Nama Guru', 'NIP', 'Mapel Utama', 'Username', 'Password', 'Status']
       }
